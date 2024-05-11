@@ -16,8 +16,8 @@ app.post('/create-checkout-session', async (req, res) => {
   const { productName, price } = req.body;
 
   const baseUrl = 'http://localhost:5173';
-  const successUrl = `${baseUrl}/complete`;
-  const cancelUrl = `${baseUrl}/cancel`;
+  const successUrl = `${baseUrl}/`;
+  const cancelUrl = `${baseUrl}/`;
 
   // Create a checkout session using Stripe API
   const session = await stripe.checkout.sessions.create({
